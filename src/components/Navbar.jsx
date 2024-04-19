@@ -16,12 +16,12 @@ const Navbar = () => {
   return (
     <div
       className={`${
-        scroll ? "bg-grey shadow-lg" : ""
+        scroll ? "bg-red-200 shadow-lg" : ""
       } fixed top-0 left-0 w-full z-20`}
     >
       <div className="flex items-center justify-between relative container py-4 px-2 mx-auto">
         <Link to="/">
-          <div className="font-bold text-xl">Shopify</div>
+          <div className="font-bold text-xl">Gona Pearls shop</div>
         </Link>
         <div
           className="relative cursor-pointer"

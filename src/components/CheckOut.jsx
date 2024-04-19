@@ -8,7 +8,7 @@ const CheckOut = () => {
   const dispatch = useDispatch();
   const { cartItems, total, amount } = useSelector((state) => state.cart);
   return (
-    <div className="bg-transparentBlack fixed z-30 top-0 left-0 w-full h-screen">
+    <div className="bg-slate-200 fixed z-30 top-0 left-0 w-full h-screen">
       <div className="h-full bg-grey sm:w-[40rem] min-w-[15rem] overflow-y-auto">
         <div className="p-6">
           <div className="flex items-center justify-between">
