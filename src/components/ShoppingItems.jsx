@@ -8,16 +8,16 @@ const ShoppingItems = ({ item }) => {
   return (
     <div>
       <Link to={`/ItemDetails/${id}`}>
-        <div className="bg-red-100 h-[400px] flex items-center justify-center">
+        <div className="bg-lime-100 h-[400px] rounded-md flex items-center justify-center">
           <img src={image} alt="" className="w-[200px]" />
         </div>
       </Link>
-      <div className="mt-6 flex justify-between items-center px-4">
+      <div className="mt-6  flex justify-between items-center px-4">
         <div>
           <div className="text-sm font-bold mb-3">{name}</div>
           <div className="text-xl font-bold">${price}</div>
         </div>
-        <button className="bg-red-100 p-3" onClick={() => dispatch(add(item))}>
+        <button className="bg-lime-200 p-3" onClick={() => dispatch(add(item))}>
           Add To Cart
         </button>
       </div>
