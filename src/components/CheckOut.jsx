@@ -4,12 +4,14 @@ import CheckOutItems from "./CheckOutItems";
 import { open } from "./State/Slice/CheckOutSlice";
 import { clear } from "./State/Slice/CartSlice";
 import { useDispatch, useSelector } from "react-redux";
+
 const CheckOut = () => {
   const dispatch = useDispatch();
   const { cartItems, total, amount } = useSelector((state) => state.cart);
+
   return (
-    <div className="flex justify-center bg-lime-200 fixed z-30 top-0 left-0 w-full h-screen overflow-hidden">
-      <div className=" h-full bg-lime-200 sm:w-[40rem] min-w-[15rem] ">
+    <div className="flex justify-center bg-lime-200 fixed z-30 top-0 left-0 w-full h-screen overflow-y-auto">
+      <div className="h-full bg-lime-200 sm:w-[40rem] min-w-[15rem]">
         <div className="p-6">
           <div className="flex items-center justify-between">
             <div
@@ -30,11 +32,9 @@ const CheckOut = () => {
               </div>
             ) : (
               <>
-                {cartItems.map((cartItem) => {
-                  return (
-                    <CheckOutItems key={cartItem.id} cartItem={cartItem} />
-                  );
-                })}
+                {cartItems.map((cartItem) => (
+                  <CheckOutItems key={cartItem.id} cartItem={cartItem} />
+                ))}
                 <div className="flex justify-between items-center mt-12">
                   <div>Total Cost: ${total.toFixed(2)}</div>
                   <HiTrash

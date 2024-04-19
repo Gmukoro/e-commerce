@@ -3,14 +3,19 @@ import CheckOut from "./components/CheckOut";
 import Navbar from "./components/Navbar";
 import ShoppingContainer from "./components/ShoppingContainer";
 import ItemDetails from "./components/ItemDetails";
+
 import { useSelector, useDispatch } from "react-redux";
 import { total } from "./components/State/Slice/CartSlice";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import Hero from "./components/Hero";
 const Layout = () => {
   const { isOpen } = useSelector((state) => state.checkout);
   return (
     <div>
       <Navbar />
+
+      <Hero />
+
       {isOpen && <CheckOut />}
       <Outlet />
     </div>
