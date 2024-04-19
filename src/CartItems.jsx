@@ -17,9 +17,9 @@ export const items = [
   },
   {
     id: 2,
-    image: item2,
-    name: "Scissor",
-    price: 4.3,
+    image: item6,
+    name: "Aumeo Audio",
+    price: 368.66,
   },
   {
     id: 3,
@@ -41,15 +41,15 @@ export const items = [
   },
   {
     id: 6,
-    image: item6,
-    name: "Aumeo Audio",
-    price: 368.66,
+    image: item2,
+    name: "Scissor",
+    price: 4.3,
   },
   {
     id: 7,
-    image: item7,
-    name: "Bottle Humidifier",
-    price: 15,
+    image: item9,
+    name: "Kettle Teapot",
+    price: 25,
   },
   {
     id: 8,
@@ -59,8 +59,8 @@ export const items = [
   },
   {
     id: 9,
-    image: item9,
-    name: "Kettle Teapot",
-    price: 25,
+    image: item7,
+    name: "Bottle Humidifier",
+    price: 15,
   },
 ];
