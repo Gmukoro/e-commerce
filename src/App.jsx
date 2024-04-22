@@ -17,6 +17,7 @@ const Layout = () => {
       <Hero />
       {isOpen && <CheckOut />}
       <Outlet />
+      {/* <Footer /> */}
     </div>
   );
 };
