@@ -15,7 +15,9 @@ const HeroSection = () => {
       <h1 className="text-3xl font-bold mb-4 bg-amber-800">
         Welcome to Gona Pearls shop!
       </h1>
-      <p className="text-lg">Discover our latest collection of unique items</p>
+      <p className="text-lg text-brown">
+        Discover our latest collection of unique items
+      </p>
     </motion.div>
   );
 };
@@ -40,7 +42,7 @@ const Description = () => {
         Get 20% off on all items!
       </motion.div>
 
-      <p className="text-lg bg-amber-800">
+      <p className="text-lg text-amber-800">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
         vehicula, ligula vitae commodo convallis, purus odio commodo sem, nec
         varius purus purus sit amet arcu.
