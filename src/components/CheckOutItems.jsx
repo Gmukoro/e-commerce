@@ -8,7 +8,7 @@ const CheckOutItems = ({ cartItem }) => {
   const { id, price, amount, name, image } = cartItem;
 
   return (
-    <div className="bg-lime-50 border border-solid border-glass p-4 mb-6 overflow-x-auto">
+    <div className="bg-amber-300 border border-solid border-glass p-4 mb-6 overflow-x-auto">
       {/* Enable horizontal scrolling */}
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-4">

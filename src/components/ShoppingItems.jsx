@@ -20,12 +20,12 @@ const ShoppingItems = ({ item }) => {
     <div>
       <div className="relative">
         {showAlert && (
-          <div className="bg-lime-400 text-green-800 p-2 rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 mt-2 z-10">
+          <div className="bg-amber-600 text-green-800 p-2 rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 mt-2 z-10">
             Item added to cart!
           </div>
         )}
         <Link to={`/ItemDetails/${id}`}>
-          <div className="bg-lime-100 h-[400px] rounded-md flex items-center justify-center">
+          <div className="bg-amber-500 h-[400px] rounded-md flex items-center justify-center">
             <img src={image} alt="" className="w-[200px]" />
           </div>
         </Link>
@@ -34,7 +34,7 @@ const ShoppingItems = ({ item }) => {
             <div className="text-sm font-bold mb-3">{name}</div>
             <div className="text-xl font-bold">${price}</div>
           </div>
-          <button className="bg-lime-200 p-3" onClick={addToCart}>
+          <button className="bg-amber-600 p-3" onClick={addToCart}>
             Add To Cart
           </button>
         </div>

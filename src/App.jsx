@@ -64,7 +64,7 @@ const App = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-lime-400  text-black text-center py-4">
+    <footer className="bg-amber-600  text-black text-center py-4">
       <p>&copy; {new Date().getFullYear()} Gona Pearls. All rights reserved.</p>
     </footer>
   );

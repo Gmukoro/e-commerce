@@ -10,8 +10,8 @@ const CheckOut = () => {
   const { cartItems, total, amount } = useSelector((state) => state.cart);
 
   return (
-    <div className="flex justify-center bg-lime-200 fixed z-30 top-0 left-0 w-full h-screen overflow-y-auto">
-      <div className="h-full bg-lime-200 sm:w-[40rem] min-w-[15rem]">
+    <div className="flex justify-center bg-amber-800 fixed z-30 top-0 left-0 w-full h-screen overflow-y-auto">
+      <div className="h-full bg-amber-500 sm:w-[40rem] min-w-[15rem]">
         <div className="p-6">
           <div className="flex items-center justify-between">
             <div
