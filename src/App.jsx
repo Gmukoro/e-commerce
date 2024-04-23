@@ -12,7 +12,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 const Layout = () => {
   const { isOpen } = useSelector((state) => state.checkout);
   return (
-    <div>
+    <div className="bg-gray-100">
       <Navbar />
       <Hero />
       {isOpen && <CheckOut />}
