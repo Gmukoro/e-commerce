@@ -50,7 +50,6 @@ const CheckOut = () => {
           </div>
         </div>
       </div>
-      <footer />
     </div>
   );
 };
