@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import item1 from "../assets/item1.png";
-import item4 from "../assets/item4.png"; // Import the second item image
+import item4 from "../assets/item4.png";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
@@ -12,10 +12,15 @@ const HeroSection = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h1 className="text-3xl font-bold mb-4 bg-amber-800">
+      <motion.h1
+        className="text-3xl font-bold mb-4 bg-amber-800"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
         Welcome to Gona Pearls shop!
-      </h1>
-      <p className="text-lg text-brown">
+      </motion.h1>
+      <p className="text-lg text-blue">
         Discover our latest collection of unique items
       </p>
     </motion.div>
@@ -42,7 +47,7 @@ const Description = () => {
         Get 20% off on all items!
       </motion.div>
 
-      <p className="text-lg text-amber-800">
+      <p className="text-lg text-amber-300">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
         vehicula, ligula vitae commodo convallis, purus odio commodo sem, nec
         varius purus purus sit amet arcu.
@@ -64,25 +69,25 @@ const Hero = () => {
         transition={{ duration: 1 }}
       />
       <motion.img
-        src={item4} // Use the second item image
+        src={item4}
         alt="Item 2"
-        className="absolute left-0 bottom-50% w-64 h-64 object-contain z-10" // Adjust size and positioning as needed
+        className="absolute left-0 bottom-50% w-64 h-64 object-contain z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       />
       <motion.img
-        src={item4} // Use the second item image
+        src={item4}
         alt="Item 2"
-        className="absolute right-0 bottom-50% w-100 h-100 object-contain z-10" // Adjust size and positioning as needed
+        className="absolute right-0 bottom-50% w-100 h-100 object-contain z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       />
       <motion.img
-        src={item4} // Use the second item image
+        src={item4}
         alt="Item 2"
-        className="absolute right-0 bottom-50% w-64 h-64 object-contain z-10" // Adjust size and positioning as needed
+        className="absolute right-0 bottom-50% w-64 h-64 object-contain z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
