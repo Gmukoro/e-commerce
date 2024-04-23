@@ -9,7 +9,6 @@ const CheckOutItems = ({ cartItem }) => {
 
   return (
     <div className="bg-amber-600 border border-solid border-glass p-4 mb-6 overflow-x-auto">
-      {/* Enable horizontal scrolling */}
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-4">
           <img src={image} alt="" className="w-20 h-20 object-cover" />

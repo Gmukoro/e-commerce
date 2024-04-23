@@ -2,7 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import item1 from "../assets/item1.png";
 import item4 from "../assets/item4.png";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { motion } from "framer-motion";
+import ShoppingItems from "./ShoppingItems";
+
+const bestSellingItems = [
+  { id: 1, image: item1, name: "Bestseller", price: 79.99 },
+  { id: 2, image: item4, name: "Bestseller 2", price: 58.33 },
+];
 
 const HeroSection = () => {
   return (
@@ -18,7 +26,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        Welcome to Gona Pearls
+        Gona Pearls
       </motion.h1>
 
       <p className="text-lg text-gray-700 mb-8">
@@ -26,7 +34,7 @@ const HeroSection = () => {
       </p>
 
       <Link
-        to="/ShoppingContainer"
+        to="/ShoppingItems"
         className="bg-amber-800 text-white py-3 px-8 rounded-full text-lg font-semibold transition duration-300 hover:bg-amber-600 hover:text-white"
       >
         Explore Now
@@ -38,25 +46,58 @@ const HeroSection = () => {
 const Hero = () => {
   return (
     <div className="bg-gray-100 relative flex flex-col lg:flex-row justify-center items-center h-screen p-6 lg:p-10">
-      <motion.img
-        src={item1}
-        alt="Background"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      />
+      <Carousel
+        additionalTransfrom={0}
+        arrows
+        autoPlay
+        autoPlaySpeed={3000}
+        centerMode={false}
+        className=""
+        containerClass="container mx-auto"
+        dotListClass=""
+        draggable
+        focusOnSelect={false}
+        infinite
+        itemClass=""
+        keyBoardControl
+        minimumTouchDrag={80}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        responsive={{
+          desktop: {
+            breakpoint: {
+              max: 3000,
+              min: 1024,
+            },
+            items: 3,
+          },
+          tablet: {
+            breakpoint: {
+              max: 1024,
+              min: 464,
+            },
+            items: 2,
+          },
+          mobile: {
+            breakpoint: {
+              max: 464,
+              min: 0,
+            },
+            items: 1,
+          },
+        }}
+        showDots={false}
+        sliderClass=""
+        slidesToSlide={1}
+        swipeable
+      >
+        {bestSellingItems.map((item) => (
+          <ShoppingItems key={item.id} item={item} />
+        ))}
+      </Carousel>
       <div className="z-10 lg:w-1/2 lg:pr-10 text-center lg:text-left">
         <HeroSection />
       </div>
-      <motion.img
-        src={item4}
-        alt="Item 2"
-        className="absolute right-0 bottom-0 lg:hidden w-72 h-72 object-contain z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      />
     </div>
   );
 };
