@@ -11,7 +11,7 @@ const CheckOut = () => {
 
   return (
     <div className="flex justify-center bg-amber-800 fixed z-30 top-0 left-0 w-full h-screen overflow-y-auto">
-      <div className="h-full bg-amber-500 sm:w-[40rem] min-w-[15rem]">
+      <div className="h-full bg-amber-800 sm:w-[40rem] min-w-[15rem]">
         <div className="p-6">
           <div className="flex items-center justify-between">
             <div
@@ -50,6 +50,7 @@ const CheckOut = () => {
           </div>
         </div>
       </div>
+      <footer />
     </div>
   );
 };

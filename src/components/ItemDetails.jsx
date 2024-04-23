@@ -9,7 +9,7 @@ const ItemDetails = () => {
   const item = items.find((item) => item.id === parseInt(id));
   const { name, price, image } = item;
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4">
+    <div className="bg-amber-800 min-h-screen w-full flex items-center justify-center p-4">
       <div className="lg:flex items-center justify-center">
         <img
           src={image}

@@ -13,13 +13,15 @@ const HeroSection = () => {
       transition={{ duration: 1 }}
     >
       <motion.h1
-        className="text-3xl font-bold mb-4 bg-amber-800"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        className="text-4xl font-bold mb-4 text-white"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
+        whileHover={{ scale: 1.05 }}
       >
         Welcome to Gona Pearls shop!
       </motion.h1>
+
       <p className="text-lg text-blue">
         Discover our latest collection of unique items
       </p>
@@ -30,13 +32,13 @@ const HeroSection = () => {
 const Description = () => {
   return (
     <motion.div
-      className="description text-center"
+      className="description text-center mt-8"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.5 }}
     >
       <motion.div
-        className="text-lg font-semibold mb-2 overflow-hidden"
+        className="text-lg font-semibold mb-2 overflow-hidden text-white"
         initial={{ opacity: 1, x: "50%", width: "100%" }}
         animate={{
           opacity: 1,
@@ -47,7 +49,7 @@ const Description = () => {
         Get 20% off on all items!
       </motion.div>
 
-      <p className="text-lg text-amber-300">
+      <p className="text-lg text-white">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
         vehicula, ligula vitae commodo convallis, purus odio commodo sem, nec
         varius purus purus sit amet arcu.
@@ -58,12 +60,11 @@ const Description = () => {
 
 const Hero = () => {
   return (
-    <div className="bg-amber-800 relative flex flex-col lg:flex-row justify-center items-center h-screen p-6 lg:p-10">
+    <div className="bg-gradient-to-b from-amber-800 to-amber-600 relative flex flex-col lg:flex-row justify-center items-center h-screen p-6 lg:p-10">
       <motion.img
         src={item1}
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
-        style={{ opacity: 0.3 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -71,7 +72,7 @@ const Hero = () => {
       <motion.img
         src={item4}
         alt="Item 2"
-        className="absolute left-0 bottom-50% w-64 h-64 object-contain z-10"
+        className="absolute left-0 bottom-0 w-72 h-72 object-contain z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -79,7 +80,7 @@ const Hero = () => {
       <motion.img
         src={item4}
         alt="Item 2"
-        className="absolute right-0 bottom-50% w-100 h-100 object-contain z-10"
+        className="absolute right-0 bottom-0 w-72 h-72 object-contain z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -87,7 +88,7 @@ const Hero = () => {
       <motion.img
         src={item4}
         alt="Item 2"
-        className="absolute right-0 bottom-50% w-64 h-64 object-contain z-10"
+        className="absolute right-0 bottom-0 w-72 h-72 object-contain z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -102,10 +103,10 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1 }}
         >
           <Link
-            className="bg-amber-800 px-6 py-3 rounded-md text-lg font-semibold border-t-2 transition-colors duration-300 hover:bg-amber-600 hover:text-white"
+            className="bg-amber-800 px-6 py-3 rounded-md text-lg font-semibold border-t-2 transition-colors duration-600 hover:bg-amber-600 hover:text-white"
             to="/ShoppingContainer"
           >
-            Scroll Down it's Shopping Time
+            Scroll Down for Shopping Time
           </Link>
         </motion.div>
       </div>

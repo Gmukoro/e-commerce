@@ -17,7 +17,7 @@ const Layout = () => {
       <Hero />
       {isOpen && <CheckOut />}
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
@@ -58,7 +58,6 @@ const App = () => {
   return (
     <div className="font-BeVietnamPro">
       <RouterProvider router={router}></RouterProvider>
-      <Footer />
     </div>
   );
 };
