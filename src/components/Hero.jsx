@@ -46,59 +46,63 @@ const HeroSection = () => {
 const Hero = () => {
   return (
     <div className="bg-gray-100 relative flex flex-col lg:flex-row justify-center items-center h-screen p-6 lg:p-10">
-      <div className="w-1/2 max-w-screen-lg flex flex-col lg:flex lg:justify-center lg:items-center mb-8 mt-8 lg:mb-0">
+      <div className="w-full lg:w-1/2 max-w-screen-lg flex flex-col lg:flex lg:justify-center lg:items-center mb-8 mt-8 lg:mb-0">
         <motion.h2 className="text-2xl font-bold mb-2 ml-0">
           Our Best Sellers
         </motion.h2>
-        <Carousel
-          additionalTransfrom={0}
-          arrows
-          autoPlay
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className=""
-          containerClass="container mx-auto"
-          dotListClass=""
-          draggable
-          focusOnSelect={false}
-          infinite
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 1024,
+        <div className="w-full lg:w-1/2">
+          {" "}
+          {/* Adjust the width based on screen size */}
+          <Carousel
+            additionalTransfrom={0}
+            arrows
+            autoPlay
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className=""
+            containerClass="container mx-auto"
+            dotListClass=""
+            draggable
+            focusOnSelect={false}
+            infinite
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1024,
+                },
+                items: 2,
               },
-              items: 2, // Adjusted to 2 items for desktop
-            },
-            tablet: {
-              breakpoint: {
-                max: 1024,
-                min: 464,
+              tablet: {
+                breakpoint: {
+                  max: 1024,
+                  min: 464,
+                },
+                items: 2,
               },
-              items: 2,
-            },
-            mobile: {
-              breakpoint: {
-                max: 464,
-                min: 0,
+              mobile: {
+                breakpoint: {
+                  max: 464,
+                  min: 0,
+                },
+                items: 1,
               },
-              items: 1,
-            },
-          }}
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
-        >
-          {bestSellingItems.map((item) => (
-            <ShoppingItems key={item.id} item={item} />
-          ))}
-        </Carousel>
+            }}
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
+            {bestSellingItems.map((item) => (
+              <ShoppingItems key={item.id} item={item} />
+            ))}
+          </Carousel>
+        </div>
       </div>
       <div className="z-10 lg:w-1/2 lg:pr-10 text-center lg:text-left">
         <HeroSection />
