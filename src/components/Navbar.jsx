@@ -21,7 +21,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between relative container py-4 px-2 mx-auto">
         <Link to="/">
-          <div className="font-bold text-xl">Gona Pearls shop</div>
+          <div className="font-bold text-3xl mb-4 ">Gona Pearls shop</div>
         </Link>
         <div
           className="relative cursor-pointer"

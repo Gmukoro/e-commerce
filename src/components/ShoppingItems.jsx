@@ -23,7 +23,7 @@ const ShoppingItems = ({ item }) => {
       whileHover={{ scale: 1.05 }}
     >
       {showAlert && (
-        <div className="bg-green-500 text-white p-2 rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 mt-2 z-10">
+        <div className="bg-amber-600 text-white p-2 rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 mt-2 z-10">
           Item added to cart!
         </div>
       )}
