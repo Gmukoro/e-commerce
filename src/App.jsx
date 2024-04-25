@@ -14,7 +14,7 @@ const Layout = () => {
   return (
     <div className="bg-gray-100">
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
       {isOpen && <CheckOut />}
       <Outlet />
       <Footer />
